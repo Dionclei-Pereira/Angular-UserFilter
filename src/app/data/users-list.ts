@@ -16,7 +16,7 @@ export const UsersList: IUser[] = [
         phone: "11912345678",
         active: true,
         function: "Developer",
-        dateRegistration: "2023-08-01T09:00:00.000Z",
+        registrationDate: "2023-08-01T09:00:00.000Z",
         status: {
             online: true,
             verified: true,
@@ -39,7 +39,7 @@ export const UsersList: IUser[] = [
         phone: "21956789101",
         active: false,
         function: "Designer",
-        dateRegistration: "2023-08-05T09:00:00.000Z",
+        registrationDate: "2023-08-05T09:00:00.000Z",
         status: {
             online: false,
             verified: false,
@@ -62,7 +62,7 @@ export const UsersList: IUser[] = [
         phone: "31911121314",
         active: true,
         function: "Manager",
-        dateRegistration: "2023-08-10T09:00:00.000Z",
+        registrationDate: "2023-08-10T09:00:00.000Z",
         status: {
             online: false,
             verified: true,
@@ -85,7 +85,7 @@ export const UsersList: IUser[] = [
         phone: "51915161718",
         active: false,
         function: "Analyst",
-        dateRegistration: "2023-08-15T09:00:00.000Z",
+        registrationDate: "2023-08-15T09:00:00.000Z",
         status: {
             online: true,
             verified: false,
@@ -108,7 +108,7 @@ export const UsersList: IUser[] = [
         phone: "81919202122",
         active: true,
         function: "Director",
-        dateRegistration: "2023-08-20T09:00:00.000Z",
+        registrationDate: "2023-08-20T09:00:00.000Z",
         status: {
             online: false,
             verified: true,

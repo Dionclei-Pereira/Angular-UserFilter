@@ -10,6 +10,6 @@ export interface IUser {
     phone: string
     active: boolean
     function: string
-    dateRegistration: string
+    registrationDate: string
     status: IStatus
 }
