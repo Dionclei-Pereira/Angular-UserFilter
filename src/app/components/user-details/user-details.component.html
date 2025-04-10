@@ -1,33 +1,35 @@
 <div class="user-details">
-    <mat-list>
-        <mat-list-item class="text-align-center"><span class="custom-h2">User Details</span></mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>
-            <span class="custom-h2">Name: </span><span class="custom-h3">Kevin Smith</span>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>
-            <span class="custom-h2">Email: </span><span class="custom-h3">kevin&#64;gmail.com</span>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>
-            <span class="custom-h2">Phone: </span><span class="custom-h3">(48) 99749-2342</span> 
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>
-            <span class="custom-h2">Address: </span><span class="custom-h3">Rua das Flores, 42, São Paulo - SP</span>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>
-            <span class="custom-h2">Status: </span><span class="custom-h3">Active</span>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>
-            <span class="custom-h2">Function: </span><span class="custom-h3">Developer</span>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>
-            <span class="custom-h2">Registration Date: </span><span class="custom-h3">02/16/2023</span>
-        </mat-list-item>
-    </mat-list>
+    <ng-container *ngIf="user != undefined">
+        <mat-list>
+            <mat-list-item class="text-align-center"><span class="custom-h2">User Details</span></mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <span class="custom-h2">Name: </span><span class="custom-h3">{{ user.name }}</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <span class="custom-h2">Email: </span><span class="custom-h3">{{ user.email }}</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <span class="custom-h2">Phone: </span><span class="custom-h3">{{ user.phone }}</span> 
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <span class="custom-h2">Address: </span><span class="custom-h3">{{ user.address.street }}, {{ user.address.number }}, {{ user.address.city }} - {{ user.address.state }}</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <span class="custom-h2">Status: </span><span class="custom-h3">{{ user.active }}</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <span class="custom-h2">Function: </span><span class="custom-h3">{{ user.function }}</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <span class="custom-h2">Registration Date: </span><span class="custom-h3">{{ user.registrationDate }}</span>
+            </mat-list-item>
+        </mat-list>
+    </ng-container>
 </div>
