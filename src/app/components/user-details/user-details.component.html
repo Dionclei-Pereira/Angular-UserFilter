@@ -4,27 +4,27 @@
             <mat-list-item class="text-align-center"><span class="custom-h2">User Details</span></mat-list-item>
             <mat-divider></mat-divider>
             <mat-list-item>
-                <span class="custom-h2">Name: </span><span class="custom-h3">{{ user.name }}</span>
+                <span class="custom-h2">Name: </span><span class="custom-h3">{{ user.name | dashIfEmpty }}</span>
             </mat-list-item>
             <mat-divider></mat-divider>
             <mat-list-item>
-                <span class="custom-h2">Email: </span><span class="custom-h3">{{ user.email }}</span>
+                <span class="custom-h2">Email: </span><span class="custom-h3">{{ user.email | dashIfEmpty }}</span>
             </mat-list-item>
             <mat-divider></mat-divider>
             <mat-list-item>
-                <span class="custom-h2">Phone: </span><span class="custom-h3">{{ user.phone | phone }}</span> 
+                <span class="custom-h2">Phone: </span><span class="custom-h3">{{ user.phone | phone | dashIfEmpty }}</span> 
             </mat-list-item>
             <mat-divider></mat-divider>
             <mat-list-item>
-                <span class="custom-h2">Address: </span><span class="custom-h3">{{ user.address | address }}</span>
+                <span class="custom-h2">Address: </span><span class="custom-h3">{{ user.address | address | dashIfEmpty }}</span>
             </mat-list-item>
             <mat-divider></mat-divider>
             <mat-list-item>
-                <span class="custom-h2">Status: </span><span class="custom-h3">{{ user.active | status }}</span>
+                <span class="custom-h2">Status: </span><span class="custom-h3">{{ user.active | status | dashIfEmpty }}</span>
             </mat-list-item>
             <mat-divider></mat-divider>
             <mat-list-item>
-                <span class="custom-h2">Function: </span><span class="custom-h3">{{ user.function }}</span>
+                <span class="custom-h2">Function: </span><span class="custom-h3">{{ user.function | dashIfEmpty }}</span>
             </mat-list-item>
             <mat-divider></mat-divider>
             <mat-list-item>
