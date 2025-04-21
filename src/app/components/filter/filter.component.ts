@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IFilterOptions } from '../../interfaces/filter-options.interface';
 
 @Component({
   selector: 'app-filter',
@@ -8,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class FilterComponent {
   selectedStatus: boolean | undefined;
+  
+  filterOptions: IFilterOptions = {
+    name: undefined,
+    startDate: undefined,
+    endDate: undefined,
+    status: undefined
+  }
+
+  onFilter() {
+    console.log(this.filterOptions)
+  }
 }

@@ -1,17 +1,17 @@
 <div class="filter">
-    <form class="form">
+    <div class="form">
         <div class="form__name">
             <mat-form-field class="example-full-width">
                 <mat-label>Name</mat-label>
-                <input matInput placeholder="Ex. Kevin">
+                <input matInput placeholder="Ex. Kevin" name="filterName" [(ngModel)]="filterOptions.name">
             </mat-form-field>
         </div>
         <div class="form__date-picker">
             <mat-form-field>
                 <mat-label>Enter a date range</mat-label>
                 <mat-date-range-input [rangePicker]="picker">
-                  <input matStartDate placeholder="Start date">
-                  <input matEndDate placeholder="End date">
+                  <input matStartDate placeholder="Start date" [(ngModel)]="filterOptions.startDate">
+                  <input matEndDate placeholder="End date" [(ngModel)]="filterOptions.endDate">
                 </mat-date-range-input>
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-date-range-picker #picker></mat-date-range-picker>
@@ -20,14 +20,14 @@
         <div class="form__status">
             <mat-form-field>
                 <mat-label>Status</mat-label>
-                <mat-select [(ngModel)]="selectedStatus" name="status" required>
+                <mat-select [(ngModel)]="selectedStatus" name="status" [(ngModel)]="filterOptions.status" required>
                     <mat-option value="true">Active</mat-option>
                     <mat-option value="false">Inactive</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
         <div class="form__button">
-            <button mat-fab extended class="btn">Search</button>
+            <button mat-fab extended class="btn" (click)="onFilter()">Search</button>
         </div>
-      </form>
+      </div>
 </div>
