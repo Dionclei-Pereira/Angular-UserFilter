@@ -20,9 +20,10 @@
         <div class="form__status">
             <mat-form-field>
                 <mat-label>Status</mat-label>
-                <mat-select [(ngModel)]="selectedStatus" name="status" [(ngModel)]="filterOptions.status" required>
+                <mat-select [(ngModel)]="selectedStatus" name="status" [(ngModel)]="filterOptions.status">
                     <mat-option [value]="true">Active</mat-option>
                     <mat-option [value]="false">Inactive</mat-option>
+                    <mat-option [value]="undefined">Both</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
